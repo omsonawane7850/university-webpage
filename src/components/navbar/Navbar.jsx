@@ -1,9 +1,17 @@
+import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
+
   return (
-    <nav className={`${styles.nav} container`}>
+    <nav className={`${styles.nav} ${sticky ? styles.darkNav : ""}`}>
       <img src={logo} alt="logo" className={styles.logo} />
       <ul>
         <li>Home</li>
