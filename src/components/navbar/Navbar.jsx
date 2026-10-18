@@ -11,7 +11,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`${styles.nav} ${sticky ? styles.darkNav : ""}`}>
+<nav className={`${styles.nav} ${sticky ? styles.darkNav : ""} container`}>
       <img src={logo} alt="logo" className={styles.logo} />
       <ul>
         <li>Home</li>

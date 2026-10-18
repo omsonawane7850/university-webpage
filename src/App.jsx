@@ -4,6 +4,7 @@ import Campus from "./components/campus/Campus";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Programs from "./components/programs/Programs";
+import Testimonials from "./components/testimonials/Testimonials";
 import Title from "./components/title/Title";
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
         <About />
         <Title subTitle="Gallery" title="Campus Photos" />
         <Campus />
+        <Title subTitle="Testimonials" title="What students says" />
+        <Testimonials />
       </div>
     </>
   );
 }
-
 export default App;
