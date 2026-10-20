@@ -11,6 +11,10 @@
   flex-basis: 31%;
   min-width: 0;
   position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .program img {
@@ -123,7 +127,7 @@
   }
 }
 /* Touch Devices */
-@media (hover: none) {
+@media (hover: none), (pointer: coarse) {
   .program:hover .caption {
     opacity: 0;
     padding-top: 70%;
