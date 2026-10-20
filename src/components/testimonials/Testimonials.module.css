@@ -97,7 +97,7 @@
   }
 }
 
-/* ---------- Mobile (<= 600px): 1 slide, swipe se chalega, arrows hide ---------- */
+/* ---------- Mobile (<= 600px): swipe slider + peek + hint ---------- */
 @media (max-width: 600px) {
   .testimonials {
     margin: 40px auto;
@@ -117,14 +117,15 @@
     display: none;
   }
   .slider ul {
-    width: 400%;
-    transform: none !important; /* JS ka inline transform ignore */
+    width: auto;
+    transform: none !important;
     transition: none;
   }
   .slider ul li {
-    flex: 0 0 25%;
-    width: 25%;
+    flex: 0 0 100%;
+    width: auto;
     padding: 8px;
+    box-sizing: border-box;
     scroll-snap-align: start;
   }
   .slide {
@@ -140,5 +141,17 @@
   }
   .slide p {
     font-size: 14px;
+  }
+
+  /* Swipe hint */
+  .testimonials::after {
+    content: "Swipe to see more →";
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #212ea0;
   }
 }
