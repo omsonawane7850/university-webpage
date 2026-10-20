@@ -1,13 +1,57 @@
 .footer {
   margin: 10px auto;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px 20px;
   border-top: 1px solid #797979;
   padding: 15px 0;
 }
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0;
+  padding: 0;
+}
 .footer ul li {
   list-style-type: none;
-  display: inline-block;
-  margin-left: 20px;
+}
+
+/* ---------- Laptop small / Tablet landscape (<= 1000px) ---------- */
+@media (max-width: 1000px) {
+  .footer {
+    width: 94%;
+  }
+  .footer p,
+  .footer ul li {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Tablet portrait (<= 768px): stack, center ---------- */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .footer ul {
+    justify-content: center;
+  }
+}
+
+/* ---------- Mobile (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .footer {
+    gap: 10px;
+  }
+  .footer p,
+  .footer ul li {
+    font-size: 14px;
+  }
+  .footer ul {
+    gap: 6px 16px;
+  }
 }

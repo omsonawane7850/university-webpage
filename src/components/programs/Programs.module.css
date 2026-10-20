@@ -4,24 +4,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
+
+.program {
+  flex-basis: 31%;
+  min-width: 0;
+  position: relative;
+}
+
 .program img {
   width: 100%;
   border-radius: 10px;
   display: block;
 }
-.program {
-  flex-basis: 31%;
-  position: relative;
-}
+
 .caption {
   border-radius: 10px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgb(0, 15, 152, 0.3);
+  inset: 0;
+  background: rgba(0, 15, 152, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,13 +32,105 @@
   cursor: pointer;
   opacity: 0;
   padding-top: 70%;
-  transition: ease-out 0.4s;
+  transition:
+    opacity 0.4s ease,
+    padding-top 0.4s ease;
 }
+
 .caption img {
   width: 60px;
   margin-bottom: 10px;
 }
-.program :hover.caption {
+
+.program:hover .caption {
   opacity: 1;
   padding-top: 0;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .programs {
+    width: 94%;
+    gap: 15px;
+    margin: 60px auto;
+  }
+
+  .caption img {
+    width: 45px;
+    margin-bottom: 8px;
+  }
+
+  .caption p {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .programs {
+    flex-direction: column;
+    gap: 25px;
+    margin: 50px auto;
+  }
+
+  .program {
+    width: 80%;
+    max-width: 520px;
+    flex-basis: auto;
+  }
+
+  .caption img {
+    width: 50px;
+  }
+
+  .caption p {
+    font-size: 17px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .programs {
+    width: 90%;
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  .program {
+    width: 100%;
+  }
+
+  .caption img {
+    width: 40px;
+    margin-bottom: 6px;
+  }
+
+  .caption p {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .caption img {
+    width: 32px;
+    margin-bottom: 5px;
+  }
+
+  .caption p {
+    font-size: 13px;
+  }
+}
+/* Touch Devices */
+@media (hover: none) {
+  .program:hover .caption {
+    opacity: 0;
+    padding-top: 70%;
+  }
+
+  .caption.showCaption {
+    opacity: 1;
+    padding-top: 0;
+  }
 }

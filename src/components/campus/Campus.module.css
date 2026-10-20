@@ -4,12 +4,50 @@
   text-align: center;
 }
 .gallery {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
   margin-bottom: 40px;
 }
 .gallery img {
-  width: 23%;
+  width: 100%;
+  display: block;
   border-radius: 10px;
+}
+
+/* ---------- Laptop small / Tablet landscape (<= 1000px) ---------- */
+@media (max-width: 1000px) {
+  .campus {
+    width: 94%;
+    margin: 60px auto;
+  }
+  .gallery {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ---------- Tablet portrait (<= 768px): 2 x 2 grid ---------- */
+@media (max-width: 768px) {
+  .campus {
+    margin: 50px auto;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ---------- Mobile (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .campus {
+    margin: 40px auto;
+  }
+  .gallery {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .gallery img {
+    border-radius: 8px;
+  }
 }

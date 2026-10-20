@@ -7,8 +7,20 @@
   font-family: "Outfit", sans-serif;
 }
 
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
+  width: 100%;
+  min-width: 320px;
   background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
@@ -16,8 +28,11 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
 .container {
-  padding: 4px 10% 4px 10%;
+  width: 100%;
+  padding: 4px 10%;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -32,12 +47,61 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
+
 .btn img {
   width: 20px;
-  margin-left: 10px;
+  margin-left: 0;
 }
+
 .dark-btn {
   background-color: #212ea0;
   color: white;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 840px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .btn img {
+    width: 18px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
 }
