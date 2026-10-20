@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} name="contact">
       <div className={styles.contactCol}>
         <h3>
           Send us a message <img src={msg_icon} alt="Message icon" />
@@ -110,7 +110,11 @@ const Contact = () => {
             required
           ></textarea>
 
-          <button type="submit" className="btn dark-btn" disabled={loading}>
+          <button
+            type="submit"
+            className={`btn dark-btn ${styles.contactBtn}`}
+            disabled={loading}
+          >
             {loading ? "Sending..." : "Submit Now"}
             {!loading && <img src={white_arrow} alt="" />}
           </button>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import styles from "./Navbar.module.css";
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
@@ -11,16 +11,49 @@ const Navbar = () => {
   }, []);
 
   return (
-<nav className={`${styles.nav} ${sticky ? styles.darkNav : ""} container`}>
+    <nav className={`${styles.nav} ${sticky ? styles.darkNav : ""} container`}>
       <img src={logo} alt="logo" className={styles.logo} />
       <ul>
-        <li>Home</li>
-        <li>Program</li>
-        <li>About Us</li>
-        <li>Campus</li>
-        <li>Testimonials</li>
         <li>
-          <button className="btn">Contact Us</button>
+          {" "}
+          <Link to="hero" smooth={true} offset={0} duration={500}>
+            Home
+          </Link>{" "}
+        </li>
+        <li>
+          {" "}
+          <Link to="programs" smooth={true} offset={-250} duration={500}>
+            Program
+          </Link>
+        </li>
+        <li>
+          {" "}
+          <Link to="about" smooth={true} offset={-150} duration={500}>
+            About Us
+          </Link>
+        </li>
+        <li>
+          {" "}
+          <Link to="campus" smooth={true} offset={-250} duration={500}>
+            Campus{" "}
+          </Link>
+        </li>
+        <li>
+          {" "}
+          <Link to="testimonials" smooth={true} offset={-250} duration={500}>
+            Testimonials{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            smooth={true}
+            offset={-220}
+            duration={500}
+            className="btn"
+          >
+            Contact Us
+          </Link>
         </li>
       </ul>
     </nav>

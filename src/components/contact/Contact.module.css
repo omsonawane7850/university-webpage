@@ -3,7 +3,7 @@
   max-width: 90%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 .contactCol {
   flex-basis: 48%;
@@ -49,4 +49,7 @@
 .contact col span {
   display: block;
   margin: 20px 0;
+}
+.contactBtn{
+  margin-top: 20px;
 }

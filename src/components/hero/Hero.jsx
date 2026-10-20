@@ -3,7 +3,7 @@ import dark_arrow from "../../assets/dark-arrow.png";
 
 const Hero = () => {
   return (
-    <div className={`${styles.hero} container`}>
+    <div className={`${styles.hero} container`} name="hero">
       <div className={styles.heroText}>
         <h1>We ensure better education for a better world</h1>
         <p>

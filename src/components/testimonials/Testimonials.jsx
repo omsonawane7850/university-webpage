@@ -24,7 +24,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className={styles.testimonials}>
+    <div className={styles.testimonials} name="testimonials">
       <img
         src={next_icon}
         alt="next_icon"
