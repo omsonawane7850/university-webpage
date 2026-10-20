@@ -47,11 +47,7 @@ const Programs = () => {
               activeProgram === index ? styles.showCaption : ""
             }`}
           >
-            <img
-              src={program.image}
-              alt={program.title}
-              className={styles.programImage}
-            />
+            <img src={program.icon} alt="" className={styles.programIcon} />
             <p>{program.title}</p>
           </div>
         </div>

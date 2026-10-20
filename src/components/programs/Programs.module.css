@@ -126,14 +126,15 @@
     font-size: 13px;
   }
 }
-/* Touch Devices */
-@media (hover: none), (pointer: coarse) {
-  .program:hover .caption {
-    opacity: 0;
-    padding-top: 70%;
-  }
+/* Tap se (touch) aur click se (desktop) dono par chalega */
+.program .caption.showCaption {
+  opacity: 1;
+  padding-top: 0;
+}
 
-  .caption.showCaption {
+/* Hover sirf un devices par jahan hover hota hai */
+@media (hover: hover) {
+  .program:hover .caption {
     opacity: 1;
     padding-top: 0;
   }
