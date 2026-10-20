@@ -24,3 +24,148 @@
   background-color: #212ea0;
   transition: 0.5s;
 }
+.menuIcon {
+  display: none;
+}
+
+/* +++++++++++ media query +++++++++++++++ */
+/* Large Laptop and Desktop */
+@media (min-width: 1201px) {
+  .logo {
+    width: 180px;
+  }
+
+  .nav ul li {
+    margin: 5px 20px;
+    font-size: 16px;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+}
+
+/* Small Laptop and Large Tablet */
+@media (max-width: 1200px) and (min-width: 841px) {
+  .logo {
+    width: 150px;
+  }
+
+  .nav ul li {
+    margin: 5px 12px;
+    font-size: 14px;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+}
+
+/* Tablet and Mobile */
+@media (max-width: 840px) {
+  .nav {
+    padding: 15px 5%;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    position: relative;
+    z-index: 102;
+  }
+
+  .nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    max-width: 80vw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 80px 20px 30px;
+    background-color: #212ea0;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    transition: right 0.4s ease-in-out;
+    overflow-y: auto;
+  }
+
+  .nav ul li {
+    display: block;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .nav ul.hideMobileMenu {
+    right: -300px;
+  }
+}
+.nav ul li :global(.btn) {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+/* Medium and Small Phones */
+@media (max-width: 480px) {
+  .nav {
+    padding: 12px 4%;
+  }
+
+  .logo {
+    width: 115px;
+  }
+
+  .menuIcon {
+    width: 26px;
+  }
+
+  .nav ul {
+    width: 220px;
+    max-width: 85vw;
+    padding: 75px 20px 25px;
+    gap: 22px;
+  }
+
+  .nav ul li {
+    font-size: 14px;
+  }
+
+  .nav ul.hideMobileMenu {
+    right: -300px;
+  }
+  .nav ul li :global(.btn) {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+  .logo {
+    width: 100px;
+  }
+
+  .menuIcon {
+    width: 24px;
+  }
+
+  .nav ul {
+    width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .nav ul li :global(.btn) {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
